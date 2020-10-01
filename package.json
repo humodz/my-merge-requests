@@ -1,0 +1,26 @@
+{
+  "name": "hello-gitlab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && yarn webpack",
+    "open": "xdg-open dist/index.html",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "@gitbeaker/browser": "^23.7.0",
+    "@gitbeaker/node": "^23.7.0",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
+    "copy-webpack-plugin": "^6.1.1",
+    "dotenv": "^8.2.0",
+    "ms": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "vue": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

@@ -1,0 +1,82 @@
+html {
+  background-color: var(--light);
+  overflow-y: scroll;
+}
+
+body {
+  background-color: var(--light);
+  margin-top: 2rem;
+}
+
+
+.main--container {
+  max-width: 720px;
+}
+
+
+.mergeRequestToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.mergeRequest--item {
+  font-size: 0.75rem;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid var(--gray);
+  padding: 0.5rem 0.5rem;
+}
+
+.mergeRequest--p {
+  margin-bottom: 0.1rem !important;
+}
+
+.mergeRequestToolbar + .mergeRequest--item {
+  border-top: 1px solid var(--gray);
+}
+
+.mergeRequest--authorImage {
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 1000px;
+}
+
+.mergeRequest--body {
+  margin-left: 1rem;
+}
+
+.mergeRequest--title {
+  display: block;
+  font-weight: bold;
+  color: initial;
+  text-decoration: initial;
+}
+
+.mergeRequest--branches {
+  font-family: monospace;
+}
+
+.mergeRequest--project {
+}
+
+.mergeRequest--participants {
+  margin: 0.25rem 0;
+}
+
+.mergeRequest--comments {
+  margin-right: 0.5rem;
+}
+
+.mergeRequest--comments img {
+  vertical-align: sub;
+}
+
+.mergeRequest--participantImage {
+  border-radius: 1000px;
+  margin-right: 0.5rem;
+}
+
