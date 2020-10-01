@@ -11797,6 +11797,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gitbeaker_browser__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_gitbeaker_browser__WEBPACK_IMPORTED_MODULE_0__);
 
 
+const QUERY_KEY = 'config';
+const LOCAL_STORAGE_KEY = 'humodz:my-merge-requests:config';
+
+
 async function validateCredentials(host, token) {
   const api = new _gitbeaker_browser__WEBPACK_IMPORTED_MODULE_0__["Gitlab"]({ host, token });
 
@@ -11831,7 +11835,7 @@ function stringifyJsonBase64(data) {
 function getCredentials() {
   const query = new URLSearchParams(window.location.search);
 
-  const credentialsRaw = query.get('config') || localStorage.getItem('config');
+  const credentialsRaw = query.get(QUERY_KEY) || localStorage.getItem(LOCAL_STORAGE_KEY);
 
   if (!credentialsRaw) {
     return null;
@@ -11855,15 +11859,15 @@ function saveCredentials(credentials) {
     token: credentials.token,
   });
 
-  const query = new URLSearchParams(window.location.search);
-  query.set('config', credentialsRaw);
-  localStorage.setItem('config', credentialsRaw);
+  // const query = new URLSearchParams(window.location.search);
+  // query.set(QUERY_KEY, credentialsRaw);
+  localStorage.setItem(LOCAL_STORAGE_KEY, credentialsRaw);
   // window.location.search = query.toString();
   // throw new Error('stop the world');
 }
 
 function clearCredentials() {
-  localStorage.removeItem('config');
+  localStorage.removeItem(LOCAL_STORAGE_KEY);
   // window.location.search = '';
   // throw new Error('stop the world');
 }
