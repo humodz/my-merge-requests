@@ -5,7 +5,7 @@ List all merge requests that you've opened or have been mentioned in.
 
 The version of GitLab that I use does not have an easy way to see this kind of information, like BitBucket does.
 
-## How to use
+## How to Use
 
 In GitLab, go to *Settings > Access Tokens*, and create an access token with the following permissions: **read_user**, **read_api**.
 
